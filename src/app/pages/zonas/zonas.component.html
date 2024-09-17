@@ -1,10 +1,10 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <h1>Zonas</h1>
+    <h1>Zonak</h1>
 
     <!-- Mostrar el botón solo si todas las zonas están completadas -->
     <div *ngIf="areAllZonasCompleted()">
         <div class="centre">
-            <h2>¡Entra para cerrar el portal!</h2>
+            <h2>Sartu ataria ixteko!</h2>
             <img class="imgBtn" src="images/iconos/flechaAbajo.png" alt="pincha abajo">
             <button class="btnB" (click)="portal()"><img class="imgBtn portal-imagen " src="images/simbolos/1.png" alt="hecho"></button>
 
@@ -16,15 +16,15 @@
         <!-- Mostrar imagen "ok" solo si la zona 1 está completada -->
         <img *ngIf="isZonaCompleted('1')" class="okis" src="images/iconos/ok.png" alt="">
         <h3>El Peñón</h3>
-        <button class="btnA" (click)="goToZona1()">Zona 1</button>
+        <button class="btnA" (click)="goToZona1()">1. zona</button>
     </div>
 
     <div class="card">
         <img class="img" src="images/cuadradas/3.png" alt="">
         <!-- Mostrar imagen "ok" solo si la zona 2 está completada -->
         <img *ngIf="isZonaCompleted('2')" class="okis" src="images/iconos/ok.png" alt="">
-        <h3>La Falla</h3>
-        <button class="btnA" (click)="goToZona2()">Zona 2</button>
+        <h3>Falla</h3>
+        <button class="btnA" (click)="goToZona2()">2. zona</button>
     </div>
 
     <div class="card">
@@ -32,7 +32,7 @@
         <!-- Mostrar imagen "ok" solo si la zona 3 está completada -->
         <img *ngIf="isZonaCompleted('3')" class="okis" src="images/iconos/ok.png" alt="">
         <h3>Fosilandia</h3>
-        <button class="btnA" (click)="goToZona3()">Zona 3</button>
+        <button class="btnA" (click)="goToZona3()">3. zona</button>
     </div>
 
     <div class="card">
@@ -40,14 +40,14 @@
         <!-- Mostrar imagen "ok" solo si la zona 4 está completada -->
         <img *ngIf="isZonaCompleted('4')" class="okis" src="images/iconos/ok.png" alt="">
         <h3>K Pg</h3>
-        <button class="btnA" (click)="goToZona4()">Zona 4</button>
+        <button class="btnA" (click)="goToZona4()">4. zona</button>
     </div>
 
     <div class="card">
         <img class="img" src="images/cuadradas/31.png" alt="">
         <!-- Mostrar imagen "ok" solo si la zona 5 está completada -->
         <img *ngIf="isZonaCompleted('5')" class="okis" src="images/iconos/ok.png" alt="">
-        <h3>La cueva</h3>
-        <button class="btnA" (click)="goToZona5()">Zona 5</button>
+        <h3>Koba</h3>
+        <button class="btnA" (click)="goToZona5()">5. zona</button>
     </div>
 </div>

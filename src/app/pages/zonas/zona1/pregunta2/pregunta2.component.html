@@ -1,15 +1,15 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
   <div class="margen">
-    <h4>Segunda pregunta</h4>
-    <p>Ya sabemos dónde nos encontramos.</p>
-    <p>Ahora necesitamos saber cúando.</p>
-    <p>Veamos si las rocas que tenemos a nuestro alrededor nos dan pistas.</p>
-    <h5>Busca una pared roja bajo la cuesta de entrada</h5> 
-    <h5>¿De qué material están compuestos estos sedimentos tan rojos?</h5>
+    <h4>Bigarren galdera</h4>
+    <p>Badakigu non gauden.</p>
+    <p>Orain jakin behar dugu noiz gauden.</p>
+    <p>Ea inguruan ditugun arrokek aztarnarik ematen diguten.</p>
+    <h5>Bilatu horma gorri bat sarrerako aldaparen azpian.</h5> 
+    <h5>Zein materialez osatuta daude sedimentu gorri horiek?</h5>
     <div class="respuestas">
       <div class="opcion">
         <input type="radio" id="opcion1" name="pregunta1" value="Marga" [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
-        <label for="opcion1" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Marga', 'incorrecta': respuestaIncorrecta && seleccion === 'Marga' && comprobarPressed}">Marga</label>
+        <label for="opcion1" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Marga', 'incorrecta': respuestaIncorrecta && seleccion === 'Marga' && comprobarPressed}">Tupa</label>
       </div>
       <div class="opcion">
         <input type="radio" id="opcion2" name="pregunta1" value="Lutita" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
@@ -17,10 +17,10 @@
       </div>
       <div class="opcion">
         <input type="radio" id="opcion3" name="pregunta1" value="Arenisca" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
-        <label for="opcion3" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Arenisca', 'incorrecta': respuestaIncorrecta && seleccion === 'Arenisca' && comprobarPressed}">Arenisca</label>
+        <label for="opcion3" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Arenisca', 'incorrecta': respuestaIncorrecta && seleccion === 'Arenisca' && comprobarPressed}">Hareharria</label>
       </div>
     </div>
-    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
   </div>
 </div>
