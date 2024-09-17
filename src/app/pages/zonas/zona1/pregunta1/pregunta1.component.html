@@ -1,0 +1,24 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+  <div class="margen">
+  <h4>Primera pregunta</h4>
+  <p>Lo primero que necesitamos saber es dónde está la puerta al pasado.</p>
+  <p>¿Dónde se encuentra la brecha del espacio-tiempo que debemos cerrar?</p>
+  <h5>¿En qué playa te encuentras ahora mismo?</h5>
+  <div class="respuestas">
+    <div class="opcion">
+      <input type="radio" id="opcion1" name="pregunta1" value="Atxabiribil" [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
+      <label for="opcion1" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Atxabiribil', 'incorrecta': respuestaIncorrecta && seleccion === 'Atxabiribil' && comprobarPressed}">Atxabiribil</label>
+    </div>
+    <div class="opcion">
+      <input type="radio" id="opcion2" name="pregunta1" value="Arrietara" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+      <label for="opcion2" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Arrietara', 'incorrecta': respuestaIncorrecta && seleccion === 'Arrietara' && comprobarPressed}">Arrietara</label>
+    </div>
+    <div class="opcion">
+      <input type="radio" id="opcion3" name="pregunta1" value="Larrabasterra" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+      <label for="opcion3" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Larrabasterra', 'incorrecta': respuestaIncorrecta && seleccion === 'Larrabasterra' && comprobarPressed}">Larrabasterra</label>
+    </div>
+  </div>
+  <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+  <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+  </div>
+</div>

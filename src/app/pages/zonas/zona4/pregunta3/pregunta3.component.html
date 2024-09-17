@@ -1,0 +1,31 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div class="margen">
+        <h4>Tercera pregunta</h4>
+        <p>Sabemos que se liberó una cantidad tremenda de energía en el impacto del meteorito.</p>
+        <p>Seguramente la bruja Paleo Sorgiña haya intentado absorber ese poder y en el proceso se ha dejado la puerta al pasado abierta.</p>
+        <p>Ya que ahora sabemos algo más sobre los fósiles de la zona, vamos a intentar descubrir qué criaturas que las que encontramos por aquí ha podido sobrevivir a este cataclismo.</p>
+        <h5>¿Cuál de estas criaturas sobrevivió a la extinción provocada por el meteorito que dejó ese estrato?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Ammonites" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Ammonites', 'incorrecta': respuestaIncorrecta && seleccion === 'Ammonites' && comprobarPressed}">Ammonites</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Paleodictyon" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Paleodictyon', 'incorrecta': respuestaIncorrecta && seleccion === 'Paleodictyon' && comprobarPressed}">Paleodictyon</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Inocerámidos" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Inocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Inocerámidos' && comprobarPressed}">Inocerámidos</label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <p>¿Lo has conseguido?</p>
+    <p>¡Genial!</p>
+    <p>Aún nos falta algún símbolo.</p>
+    <p>Mete la clave secreta para descifrar las pistas:</p>
+    <p>¿Cuál es el nombre del símbolo que has encontrado?</p>
+    <input class="input" type="text" [(ngModel)]="clave" placeholder="Introduce la clave">
+    <p *ngIf="error" style="color: red;">Clave incorrecta. Inténtalo de nuevo.</p>
+    <button class="btnA" (click)="siguiente()">Ok</button>
+    <button class="btnA" (click)="ayuda()">Ayuda</button>
+</div>

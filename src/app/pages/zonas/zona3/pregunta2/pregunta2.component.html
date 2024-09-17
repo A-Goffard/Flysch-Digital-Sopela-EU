@@ -1,0 +1,35 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div class="margen">
+        <h4>Segunda pregunta</h4>
+        <p>Teniendo en cuenta los fósiles que se pueden ver en esta zona...</p>
+        <h5>¿Cuál de todos estos fósiles de la zona tiene partes duras?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta2" value="Innocerámidos" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámidos' && comprobarPressed}">
+                    Innocerámidos
+                </label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta2" value="Zoophycus" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Zoophycus', 'incorrecta': respuestaIncorrecta && seleccion === 'Zoophycus' && comprobarPressed}">
+                    Zoophycus
+                </label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta2" value="Algas" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Algas', 'incorrecta': respuestaIncorrecta && seleccion === 'Algas' && comprobarPressed}">
+                    Algas
+                </label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

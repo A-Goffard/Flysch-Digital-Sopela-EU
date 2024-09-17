@@ -1,0 +1,33 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+<!--     <app-back-component></app-back-component>
+ -->
+    <div class="margen">
+        <h4>Primera pregunta</h4>
+        <p>A lo mejor si descubrimos en qué partes del mundo afectó lo que causó estos pliegues, podemos averiguar el origen del cambio.</p>
+        <p>La orogenia Alpina fué la causante de los movimientos que dieron lugar a los pliegues que vemos en la playa.</p>
+        <h5>¿Qué montes se formaron al mismo tiempo que estos pliegues?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Los Urales" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los Urales', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Urales' && comprobarPressed}">Los Urales</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Los Andes" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los ´', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Andes' && comprobarPressed}">Los Andes</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Los Cárpatos" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los Cárpatos', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Cárpatos' && comprobarPressed}">Los Cárpatos</label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+    <!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
+    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

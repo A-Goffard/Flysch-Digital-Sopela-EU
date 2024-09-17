@@ -1,0 +1,31 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div class="margen">
+        <h4>Siguiente pregunta</h4>
+        <p>Ya que buscamos las criaturas que han podido atravesar la brecha.</p>
+        <p>Es interesante saber si alguna de las criaturas que vemos en el pasado, ha sobrevivido de forma natural hasta hoy en día</p>
+        <p>De los siguientes fósiles...</p>
+        <h5>¿Cuál ha sobrevivido a la extinción de los dinosaurios?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Innocerámidos" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámidos' && comprobarPressed}">Inocerámidos</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Ammonite', 'incorrecta': respuestaIncorrecta && seleccion === 'Ammonite' && comprobarPressed}">Ammonite</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Equinodermo" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Equinodermo', 'incorrecta': respuestaIncorrecta && seleccion === 'Equinodermo' && comprobarPressed}">Equinodermo</label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

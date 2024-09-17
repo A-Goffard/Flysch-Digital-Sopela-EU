@@ -1,0 +1,30 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div class="margen">
+        <h4>Segunda pregunta</h4>
+        <p>¿Te has fijado que los estratos de esta zona ya no son como los de antes?</p>
+        <p>Algo ha cambiado...</p>
+        <h5>¿Cuantos tipos de roca se interccalan en esta zona de la playa?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Calizas y margas" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Calizas y margas', 'incorrecta': respuestaIncorrecta && seleccion === 'Calizas y margas' && comprobarPressed}">Calizas y margas</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Calizas, margas y areniscas" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Calizas, margas y areniscas', 'incorrecta': respuestaIncorrecta && seleccion === 'Calizas, margas y areniscas' && comprobarPressed}">Calizas, margas y areniscas</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Calizas solo" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Calizas solo', 'incorrecta': respuestaIncorrecta && seleccion === 'Calizas solo' && comprobarPressed}">Calizas solo</label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

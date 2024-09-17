@@ -1,0 +1,32 @@
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div class="margen">
+        <h4>Cuarta pregunta</h4>
+        <p>¿Cómo pudo absorber la bruja la energía del meteorito?</p>
+        <p>¿Qué puede tener de valioso el impacto de  éste?</p>
+        <p>Investiguemos más sobre esto...</p>
+        <p>Una de las carácteristicas que puede ser más interesante es la fuerza de impacto.</p>
+        <h5>¿Qué pruebas puede dejar el impacto del meteorito en el estrato que tenemos aquí?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Tectitas" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Tectitas', 'incorrecta': respuestaIncorrecta && seleccion === 'Tectitas' && comprobarPressed}">Tectitas</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Carbón" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Carbón', 'incorrecta': respuestaIncorrecta && seleccion === 'Carbón' && comprobarPressed}">Carbón</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Betelgeuse" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Betelgeuse', 'incorrecta': respuestaIncorrecta && seleccion === 'Betelgeuse' && comprobarPressed}">Betelgeuse</label>
+            </div>
+        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<header>
+    <nav>
+      <!-- <div class="branding">
+        <img src="images/GeobiziLogo.png" class="logo" alt="Geobizi Logo">
+      </div> -->
+      <div class="icon">
+        <button (click)="toggleMobileNav()">
+          <img [class.icon-active]="mobileNavOpen" src="images/icons/menu.png" class="mariposita" alt="Menu">
+        </button>
+      </div>
+      <ul [ngClass]="{'dropdown-nav': true, 'open': mobileNavOpen, 'close': !mobileNavOpen}">
+        <li class="navMov">
+          <a routerLink="/home" (click)="closeMobileNav()">Inicio</a>
+        </li>
+
+        <li>
+          <a routerLink="/context" (click)="closeMobileNav()">Contexto</a>
+        </li>
+
+        <li>
+          <a routerLink="/instructions" (click)="closeMobileNav()">Instrucciones</a>
+        </li>
+
+        <li>
+          <a routerLink="/zonas" (click)="closeMobileNav()">Zonas</a>
+        </li>
+
+        <li>
+          <a routerLink="/contact" (click)="closeMobileNav()">Contacto</a>
+        </li>
+
+
+      </ul>
+    </nav>
+  </header>
+  
