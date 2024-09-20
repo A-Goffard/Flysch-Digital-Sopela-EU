@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router'; // Importa Router
 
 @Component({
   selector: 'app-portal',
@@ -8,12 +9,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './portal.component.html',
   styleUrls: ['./portal.component.css']
 })
-export class PortalComponent {
+export class PortalComponent implements OnDestroy {
   correctOrder = ['Geubas', 'Erubion', 'Ornimat', 'Besinia', 'Iridimas', 'Zobarat', 'Iletum'];
   currentOrder: string[] = [];
   puzzleComplete = false;
+  
+  // Definir los audios
+  portalSound = new Audio('sounds/portal.mp3'); // Cambia 'public' por 'assets'
+  successSound = new Audio('sounds/cerrar.mp3'); 
+  IntroSound = new Audio('sounds/entrar.mp3');
 
-  // Definir los botones con sus nombres, imágenes y un campo 'selected' para indicar si fue pulsado
   buttons = [
     { name: 'Geubas', image: 'images/simbolos/Geubas.png', disabled: false, selected: false },
     { name: 'Erubion', image: 'images/simbolos/Erubion.png', disabled: false, selected: false },
@@ -26,16 +31,34 @@ export class PortalComponent {
 
   shuffledButtons = this.shuffleArray([...this.buttons]); // Barajar los botones al cargar
 
+  constructor(private router: Router) { // Inyecta Router en el constructor
+    // Configuración del audio en bucle
+    this.portalSound.loop = true;
+  }
+
+  ngOnInit() {
+    // Comienza a reproducir la música en bucle cuando se carga el componente
+    this.playIntroSound();
+    this.playPortalSound();
+  }
+
+  ngOnDestroy() {
+    // Detiene el sonido cuando el componente se destruye
+    this.portalSound.pause();
+    this.portalSound.currentTime = 0; // Opcional: reiniciar el tiempo del audio
+  }
+
   checkOrder(index: number) {
     const selectedButton = this.shuffledButtons[index];
 
     if (this.correctOrder[this.currentOrder.length] === selectedButton.name) {
       this.currentOrder.push(selectedButton.name);
       this.shuffledButtons[index].disabled = true;
-      this.shuffledButtons[index].selected = true; // Marcar el botón como seleccionado
+      this.shuffledButtons[index].selected = true;
 
       if (this.currentOrder.length === this.correctOrder.length) {
         this.puzzleComplete = true;
+        this.playSuccessSound(); // Reproducir sonido de éxito
       }
     } else {
       this.resetButtons();
@@ -49,18 +72,37 @@ export class PortalComponent {
       button.selected = false;
     });
 
-    // Añadimos un pequeño retraso antes de rebarajar y mostrar de nuevo los botones
     setTimeout(() => {
       this.shuffledButtons = this.shuffleArray([...this.buttons]);
-    }, 500); // 500 ms de margen
+    }, 500);
   }
 
-  // Método para barajar los botones
   shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  }
+
+  playIntroSound() {
+    this.IntroSound.play();
+  }
+
+  // Reproduce la música en bucle
+  playPortalSound() {
+    this.portalSound.play();
+  }
+
+  // Detiene la música en bucle y reproduce el sonido de éxito
+  playSuccessSound() {
+    this.portalSound.pause(); // Detener la música de fondo
+    this.portalSound.currentTime = 0; // Reiniciar el tiempo del audio opcionalmente
+    this.successSound.play(); // Reproducir sonido de éxito
+  }
+
+  gotoQuestion() {
+    // Navega a la página de zonas
+    this.router.navigate(['/feedback']);
   }
 }

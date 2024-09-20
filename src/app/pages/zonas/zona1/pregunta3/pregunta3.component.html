@@ -2,35 +2,36 @@
 <!--     <app-back-component></app-back-component>
 --> 
     <div class="margen">
-        <h4>Hurrengo galdera</h4>
+        <h4>Siguiente pregunta</h4>
         <p>Vamos a ver si descubrimos el cuándo.</p>
-        <p>Badakigu zerbait aurrean dugun harkaitzari buruz.</p>
-        <p>Harri honen adina aurkitzen badugu, jakingo dugu zenbat milioi urte egin ditugun iraganera bidaiatzen.</p>
-        <h5>Zenbat milioi urte (Mu) ditu arroka gorriak zainak edo sustrai zuriak dituela dirudienak?</h5>
+        <p>Ya sabemos algo más sobre la roca que tenemos delante.</p>
+        <p>Si descubrimos la edad de esta roca, sabremos cuantos millones de años hemos viajado al pasado.</p>
+        <h5>¿Cuántos millones de años (Ma) tiene la roca roja que parece tener venas o raices blancas?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion3" name="pregunta1" value="54 Ma" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === '54 Ma', 'incorrecta': respuestaIncorrecta && seleccion === '54 Ma' && comprobarPressed}">54
-                    Mu</label>
+                    Ma</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion2" name="pregunta1" value="Unos 70 Ma"
                     [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Unos 70 Ma', 'incorrecta': respuestaIncorrecta && seleccion === 'Unos 70 Ma' && comprobarPressed}">
-                    70 Mu +-</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Unos 70 Ma', 'incorrecta': respuestaIncorrecta && seleccion === 'Unos 70 Ma' && comprobarPressed}">Unos
+                    70 Ma</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Más de 200 Ma"
                     [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Más de 200 Ma', 'incorrecta': respuestaIncorrecta && seleccion === 'Más de 200 Ma' && comprobarPressed}">> 200 Mu</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Más de 200 Ma', 'incorrecta': respuestaIncorrecta && seleccion === 'Más de 200 Ma' && comprobarPressed}">Más
+                    de 200 Ma</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
     <!--     <button (click)="goToZona1()" class="btnA" >Zona 1</button>
-    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Azalpena</button>
+    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
     </div>
 </div>

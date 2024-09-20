@@ -1,9 +1,9 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
   <div class="margen">
-  <h4>Lehenengo galdera</h4>
-  <p>Lehenik eta behin, iraganerako atea non dagoen jakin behar dugu.</p>
-  <p>Non dago itxi behar dugun espazio-denboraren arrakala?</p>
-  <h5>Zein hondartzatan zaude oraintxe bertan?</h5>
+  <h4>Primera pregunta</h4>
+  <p>Lo primero que necesitamos saber es dónde está la puerta al pasado.</p>
+  <p>¿Dónde se encuentra la brecha del espacio-tiempo que debemos cerrar?</p>
+  <h5>¿En qué playa te encuentras ahora mismo?</h5>
   <div class="respuestas">
     <div class="opcion">
       <input type="radio" id="opcion1" name="pregunta1" value="Atxabiribil" [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
@@ -18,7 +18,7 @@
       <label for="opcion3" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Larrabasterra', 'incorrecta': respuestaIncorrecta && seleccion === 'Larrabasterra' && comprobarPressed}">Larrabasterra</label>
     </div>
   </div>
-  <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
-  <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
+  <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+  <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
   </div>
 </div>

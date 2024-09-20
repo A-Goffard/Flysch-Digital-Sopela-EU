@@ -10,7 +10,7 @@
       </div>
       <ul [ngClass]="{'dropdown-nav': true, 'open': mobileNavOpen, 'close': !mobileNavOpen}">
         <li class="navMov">
-          <a routerLink="/home" (click)="closeMobileNav()">Hasiera</a>
+          <a routerLink="/home" (click)="closeMobileNav()">Inicio</a>
         </li>
 
         <li>
@@ -18,17 +18,20 @@
         </li>
 
         <li>
-          <a routerLink="/instructions" (click)="closeMobileNav()">Jarraibideak</a>
+          <a routerLink="/instructions" (click)="closeMobileNav()">Instrucciones</a>
         </li>
 
         <li>
-          <a routerLink="/zonas" (click)="closeMobileNav()">Zonak</a>
+          <a routerLink="/zonas" (click)="closeMobileNav()">Zonas</a>
         </li>
 
         <li>
-          <a routerLink="/contact" (click)="closeMobileNav()">Kontaktua</a>
+          <a routerLink="/contact" (click)="closeMobileNav()">Contacto</a>
         </li>
 
+        <li>
+          <a routerLink="/extra" (click)="closeMobileNav()">Más info</a>
+        </li>
 
       </ul>
     </nav>
