@@ -1,15 +1,15 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Segunda pregunta</h4>
-        <p>Teniendo en cuenta los fósiles que se pueden ver en esta zona...</p>
-        <h5>¿Cuál de todos estos fósiles de la zona tiene partes duras?</h5>
+        <h4>Bigarren galdera</h4>
+        <p>nguru honetan ikus daitezkeen fosilak kontuan hartuta...</p>
+        <h5>Zonaldeko fosil hauetako zeinek ditu zati gogorrak?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta2" value="Innocerámidos" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámidos' && comprobarPressed}">
-                    Innocerámidos
+                    Inozeramidoak
                 </label>
             </div>
             <div class="opcion">
@@ -17,7 +17,7 @@
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Zoophycus', 'incorrecta': respuestaIncorrecta && seleccion === 'Zoophycus' && comprobarPressed}">
-                    Zoophycus
+                    Zoophycusa
                 </label>
             </div>
             <div class="opcion">
@@ -25,11 +25,11 @@
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Algas', 'incorrecta': respuestaIncorrecta && seleccion === 'Algas' && comprobarPressed}">
-                    Algas
+                    Algak
                 </label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
     </div>
 </div>

@@ -8,17 +8,6 @@ import { ZonasComponent } from './pages/zonas/zonas.component';
 import { ExtraComponent } from './pages/extra/extra.component';
 import { PortalComponent } from './pages/portal/portal.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
-//Misiones
-import { Pistas1Component } from './pages/misiones/mision1/pistas/pistas.component';
-import { Pistas2Component } from './pages/misiones/mision2/pistas/pistas.component';
-import { Pistas3Component } from './pages/misiones/mision3/pistas/pistas.component';
-import { Pistas4Component } from './pages/misiones/mision4/pistas/pistas.component';
-import { Pistas5Component } from './pages/misiones/mision5/pistas/pistas.component';
-import { Pistas6Component } from './pages/misiones/mision6/pistas/pistas.component';
-import { Pistas7Component } from './pages/misiones/mision7/pistas/pistas.component';
-import { Pistas8Component } from './pages/misiones/mision8/pistas/pistas.component';
-import { Pistas9Component } from './pages/misiones/mision9/pistas/pistas.component';
-import { Pistas10Component } from './pages/misiones/mision10/pistas/pistas.component';
 
 // Zona 1
 
@@ -185,16 +174,6 @@ export const routes: Routes = [
   { path: 'extra', component: ExtraComponent },
   { path: 'portal', component: PortalComponent },
   { path: 'feedback', component: FeedbackComponent },
-  { path: 'pista1', component: Pistas1Component },
-  { path: 'pista2', component: Pistas2Component },
-  { path: 'pista3', component: Pistas3Component },
-  { path: 'pista4', component: Pistas4Component },
-  { path: 'pista5', component: Pistas5Component },
-  { path: 'pista6', component: Pistas6Component },
-  { path: 'pista7', component: Pistas7Component },
-  { path: 'pista8', component: Pistas8Component },
-  { path: 'pista9', component: Pistas9Component },
-  { path: 'pista10', component: Pistas10Component },
 
   { path: 'zonas', component: ZonasComponent },
 

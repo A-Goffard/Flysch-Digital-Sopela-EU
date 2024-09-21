@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BackComponentComponent } from "../../shared/back-component/back-component.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-zonas',
   standalone: true,
-  imports: [BackComponentComponent, CommonModule],
+  imports: [ CommonModule],
   templateUrl: './zonas.component.html',
   styleUrl: './zonas.component.css'
 })

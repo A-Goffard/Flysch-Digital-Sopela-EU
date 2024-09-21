@@ -1,31 +1,31 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Siguiente pregunta</h4>
-        <p>Ya que buscamos las criaturas que han podido atravesar la brecha.</p>
-        <p>Es interesante saber si alguna de las criaturas que vemos en el pasado, ha sobrevivido de forma natural hasta hoy en día</p>
-        <p>De los siguientes fósiles...</p>
-        <h5>¿Cuál ha sobrevivido a la extinción de los dinosaurios?</h5>
+        <h4>Hurrengo galdera</h4>
+        <p>Arraila zeharkatu ahal izan duten izakien bila gabiltza.</p>
+        <p>Interesgarria da jakitea iraganean ikusten ditugun izakietako batek modu naturalean iraun ote duen gaur egun arte.</p>
+        <p>Ondorengo fosiletatik...</p>
+        <h5>Zein izan da dinosauroen desagerpentik bizirik atera dena?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Innocerámidos" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámidos' && comprobarPressed}">Inocerámidos</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámidos', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámidos' && comprobarPressed}">Inozeramidoak</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion3" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Ammonite', 'incorrecta': respuestaIncorrecta && seleccion === 'Ammonite' && comprobarPressed}">Ammonite</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Ammonite', 'incorrecta': respuestaIncorrecta && seleccion === 'Ammonite' && comprobarPressed}">Ammoniteak</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion2" name="pregunta1" value="Equinodermo" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Equinodermo', 'incorrecta': respuestaIncorrecta && seleccion === 'Equinodermo' && comprobarPressed}">Equinodermo</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Equinodermo', 'incorrecta': respuestaIncorrecta && seleccion === 'Equinodermo' && comprobarPressed}">Ekinodermoak</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
     </div>
 </div>

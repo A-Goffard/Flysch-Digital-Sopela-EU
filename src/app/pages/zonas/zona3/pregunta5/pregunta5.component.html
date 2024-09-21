@@ -1,8 +1,8 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Última pregunta</h4>
-        <p>Si contásemos todas las especies de fósiles que hay en este lado de la playa...</p>
-        <h5>¿Cuántas especies diferentes podríamos llegar a encontrar?</h5>
+        <h4>Azken galdera</h4>
+        <p>Hondartzaren alde honetan dauden fosil espezie guztiak kontatuko bagenitu...</p>
+        <h5>Zenbat espezie desberdin aurkituko genituzke?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Dos" [disabled]="respuestaCorrecta"
@@ -14,16 +14,16 @@
                 <input type="radio" id="opcion3" name="pregunta1" value="Entre dos y Cinco" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Entre dos y Cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Entre dos y Cinco' && comprobarPressed}">Entre 2 y 5</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Entre dos y Cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Entre dos y Cinco' && comprobarPressed}">2 eta 5 artean</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion2" name="pregunta1" value="Más de cinco" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Más de cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Más de cinco' && comprobarPressed}">Más de 5</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Más de cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Más de cinco' && comprobarPressed}"> > 5</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
     </div>
 </div>

@@ -1,8 +1,8 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div *ngIf="!puzzleComplete">
         <div class="margen index animate__animated animate__fadeIn">
-            <h1>¡Cierra el portal!</h1>
-            <p>Pulsa los símbolos en el orden correcto.</p>
+            <h1>Itxi ataria!</h1>
+            <p>Sakatu sinboloak ordena egokian.</p>
             <div class="button-grid">
                 <button class="btn-simbolos" *ngFor="let button of shuffledButtons; let i = index"
                     (click)="checkOrder(i)" [disabled]="button.disabled" [ngClass]="{'selected': button.selected}">
@@ -18,12 +18,12 @@
                 <img src="images/simbolos/centro.png" alt="Portal Imagen" class="portal-image img-centro">
                 <img src="images/simbolos/borde.png" alt="Portal Imagen" class="portal-image img-borde">
             </div>
-            <h2>¡Has cerrado el portal!</h2>
-            <h2>¡Felicidades!</h2>
-            <p>Has salvado al mundo del desastre que se estaba gestando.</p>
-            <h3>¿Queres un premio extra?</h3>
-            <button class="btnA" (click)="gotoQuestion()">¡Consíguelo!</button>
-            <h4 class="margen">Ve a recoger tu premio. Busca a alguien con la camiseta negra de Geobizi o la gorra verde de
+            <h2>Ataria itxi duzu!</h2>
+            <h2>Zorionak!</h2>
+            <p>Mundua salbatu duzu sortzen ari zen hondamenditik.</p>
+            <h3>Sari gehigarri bat nahi duzu?</h3>
+            <button class="btnA" (click)="gotoQuestion()">Lortu ezazu!</button>
+            <h4 class="margen">Zoaz zure saria jasotzera. Bilatu norbait Geobiziren kamiseta beltzarekin edo
                 Geotxiki.</h4>
         </div>
     </div>

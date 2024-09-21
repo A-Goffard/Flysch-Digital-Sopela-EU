@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { BackComponentComponent } from '../../../../../shared/back-component/back-component.component';
 
 @Component({
   selector: 'app-zona4-pregunta5-pista2',
   standalone: true,
-  imports: [ CommonModule, BackComponentComponent ],
+  imports: [ CommonModule ],
   templateUrl: './pista2.component.html',
   styleUrl: './pista2.component.css'
 })

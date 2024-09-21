@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { BackComponentComponent } from "../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-contacto',
   standalone: true,
-  imports: [BackComponentComponent],
+  imports: [],
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })

@@ -1,9 +1,9 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Últmia pregunta</h4>
-        <p>Para poder atrapar el poder del meteorito en las tectitas es necesario un elemento poco común.</p>
-        <p>Puede que el propio meteorito lo tragera consigo.</p>
-        <h5>¿Qué elemento poco común en la Tierra se asocia con los meteoritos?</h5>
+        <h4>Azken galdera</h4>
+        <p>Meteoritoak tektitetan duen boterea harrapatu ahal izateko, ohikoa ez den elementu bat behar da.</p>
+        <p>Baliteke meteoritoak berak ekartzea. </p>
+        <h5>Lurrean ohikoa ez den zein elementu lotzen da meteoritoekin?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Astato" [disabled]="respuestaCorrecta"
@@ -24,7 +24,7 @@
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Iridio', 'incorrecta': respuestaIncorrecta && seleccion === 'Iridio' && comprobarPressed}">Iridio</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
     </div>
 </div>

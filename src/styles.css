@@ -19,7 +19,9 @@
     --darkgreen: #2c770f;
     --linkgreen: #2b3d23;
 }
-
+.mapa-img{
+    max-width: 15rem;
+}
 .logo {
     max-width: 22.5rem;
 }
@@ -175,7 +177,7 @@ input{
     } */
 
     body::before {
-        content: "Esta aplicación solo está disponible en dispositivos móviles en vertical.";
+        content: "Aplikazio hau gailu mugikor bertikaletan baino ez dago eskuragarri.";
         display: flex;
         justify-content: center;
         align-items: flex-start;

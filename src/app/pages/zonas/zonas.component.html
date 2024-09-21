@@ -1,6 +1,6 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-    <h1>Zonas</h1>
+    <h1>Zonak</h1>
 
     <!-- Mostrar el botón solo si todas las zonas están completadas -->
     <div *ngIf="areAllZonasCompleted()">
@@ -24,7 +24,7 @@
         <img class="img" src="images/cuadradas/3.png" alt="">
         <!-- Mostrar imagen "ok" solo si la zona 2 está completada -->
         <img *ngIf="isZonaCompleted('2')" class="okis" src="images/iconos/ok.png" alt="">
-        <h3>La Falla</h3>
+        <h3>Falla</h3>
         <button class="btnA" (click)="goToZona2()">Zona 2</button>
     </div>
 
@@ -48,7 +48,7 @@
         <img class="img" src="images/cuadradas/31.png" alt="">
         <!-- Mostrar imagen "ok" solo si la zona 5 está completada -->
         <img *ngIf="isZonaCompleted('5')" class="okis" src="images/iconos/ok.png" alt="">
-        <h3>La cueva</h3>
+        <h3>Koba</h3>
         <button class="btnA" (click)="goToZona5()">Zona 5</button>
     </div>
 </div>

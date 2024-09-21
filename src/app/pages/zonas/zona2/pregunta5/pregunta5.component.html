@@ -2,11 +2,11 @@
 <!--     <app-back-component></app-back-component>
  -->
     <div class="margen">
-        <h4>Última pregunta de la zona</h4>
-        <p>Hemos encontrado una relación con la magia y el ocultismo.</p>
-        <p>Quizá encontremos algo que nos ayude a solucionar este problemilla con el espacio-tiempo.</p>
-        <p>Si estamos utilizando la ciencia, geología y paleontología para investigar...</p>
-        <h5>¿Cómo podría llamarse una bruja que estubiera jugando con las criaturas del pasado?</h5>
+        <h4>Inguruko azken galdera</h4>
+        <p>Magiarekin eta okultismoarekin harremana aurkitu dugu.</p>
+        <p>Agian aurkituko dugu arazotxo hau denbora tartearekin konpontzen lagunduko digun zerbait.</p>
+        <p>Ikertzeko zientzia, geologia eta paleontologia erabiltzen ari bagara...</p>
+        <h5>Nola dei dakioke iraganeko izakiekin jolasean ari den sorgin bati? </h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Sorgiña Piruliña" [disabled]="respuestaCorrecta"
@@ -27,8 +27,7 @@
                     [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Paleo Sorgiña', 'incorrecta': respuestaIncorrecta && seleccion === 'Paleo Sorgiña' && comprobarPressed}">Paleo Sorgiña</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-    <!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
-    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Azalpena</button>
     </div>
 </div>

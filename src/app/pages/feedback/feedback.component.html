@@ -1,10 +1,10 @@
 <div id="cont" class="centrecontainer index animate__animated animate__fadeIn">
-  <h2>Ayúdanos a mejorar</h2>
+  <h2>Lagundu iezaguzu hobetzen</h2>
 
   <!-- Mostrar el formulario solo si feedbackSent es falso -->
   <form *ngIf="!feedbackSent" (ngSubmit)="submitFeedback()">
     <label for="rating">
-      <h3>Puntuación:</h3>
+      <h3>Puntuazioa:</h3>
     </label>
     <div id="rating" class="rating">
       <span *ngFor="let star of [1, 2, 3, 4, 5]" (click)="rating = star">
@@ -13,22 +13,22 @@
       </span>
     </div>
 
-    <p>Envíanos tu opinión. Te lo agradecemos enormemente.</p>
-    <p>Lo que más te ha gustado, lo que no, lo que te hubiera gustado...</p>
-    <p>¡Lo que quieras!</p>
+    <p>Bidali zure iritzia. Biotzez eskertuko dizugu.</p>
+    <p>Gehien gustatu zaizuna, zer ez, zer gustatuko litzaizukeen...</p>
+    <p>Nahi duzuna!</p>
 
     <label for="comment">
-      <h3>Comentario:</h3>
+      <h3>Iruzkina:</h3>
     </label>
     <textarea class="input" id="comment" [(ngModel)]="comment" name="comment" rows="4" required></textarea>
 
-    <button class="btnA" type="submit">Enviar</button>
+    <button class="btnA" type="submit">Bidali</button>
   </form>
 
   <!-- Mostrar el mensaje de éxito solo si feedbackSent es verdadero -->
   <div *ngIf="feedbackSent" class="success-message">
-    <p>Mensaje enviado correctamente</p>
+    <p>Mezua behar bezala bidali da</p>
     <img class="logo" src="/images/iconos/gracias.png" alt="Success" />
-    <p>Busca al portador del logo, enseñale la imagen y pídele tu premio</p>
+    <p>Bilatu logoa daramana, erakutsi irudia eta eskatu zure saria</p>
   </div>
 </div>

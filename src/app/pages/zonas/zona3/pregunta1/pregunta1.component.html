@@ -1,8 +1,8 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Primera pregunta</h4>
-        <p>Intenta encontrar uno y sacarle una foto.</p>
-        <h5>¿Cuál de estos fósiles es un ammonite?</h5>
+        <h4>Lehenengo galdera</h4>
+        <p>Saiatu fosil bat aurkitu eta argazki bat ateratzen.</p>
+        <h5>Fosil hauetatik zein da ammonite bat?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrecta"
@@ -29,7 +29,7 @@
                 </label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Egiaztatu</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Azalpena</button>
     </div>
 </div>

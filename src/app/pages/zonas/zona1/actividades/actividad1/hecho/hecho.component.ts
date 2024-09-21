@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { BackComponentComponent } from "../../../../../../shared/back-component/back-component.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule para usar ngModel
 
 @Component({
   selector: 'app-zona1-hecho',
   standalone: true,
-  imports: [CommonModule, FormsModule, BackComponentComponent], // Añade FormsModule aquí
+  imports: [CommonModule, FormsModule], // Añade FormsModule aquí
   templateUrl: './hecho.component.html',
   styleUrls: ['./hecho.component.css']
 })

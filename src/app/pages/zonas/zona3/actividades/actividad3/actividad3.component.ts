@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { BackComponentComponent } from "../../../../../shared/back-component/back-component.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-zona3-actividad3',
   standalone: true,
-  imports: [CommonModule, BackComponentComponent],
+  imports: [CommonModule],
   templateUrl: './actividad3.component.html',
   styleUrl: './actividad3.component.css'
 })
