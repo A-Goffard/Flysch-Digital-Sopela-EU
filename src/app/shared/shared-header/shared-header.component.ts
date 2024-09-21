@@ -17,7 +17,7 @@ export class NavZonasComponent {
   confirmReset(event: Event) {
     event.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
-    const userConfirmed = confirm("¿Estás seguro de que quieres borrar tu progreso y reiniciar el juego?");
+    const userConfirmed = confirm("Ziur zaude zure aurrerapena ezabatu eta jokoa berrabiarazi nahi duzula?");
     if (userConfirmed) {
       this.resetGame(); 
     }
